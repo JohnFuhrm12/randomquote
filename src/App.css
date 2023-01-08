@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+html, body {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#page {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('palms.jpg');
+  background-size: cover;
+  background-repeat: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#quote-box {
+  position: relative;
+  top: 20%;
+  width: 50%;
+  margin: 0 auto;
+  background-color: black;
+  border: solid 3px white;
+  border-radius: 15px;
+  padding: 5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#text {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#author {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#bottom-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#new-quote {
+  padding: 1.5%;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+#new-quote:hover {
+  background-color: gray;
+  transition: 0.5s;
 }
