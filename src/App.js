@@ -9,7 +9,7 @@ function App() {
   const [author, setAuthor] = useState('');
 
   let randomNum = Math.floor(Math.random() * 10);
-  let tweetPath = `https://twitter.com/intent/tweet?text=%22If%20you%20do%20what%20you%E2%80%99ve%20always%20done%2C%20you%E2%80%99ll%20get%20what%20you%E2%80%99ve%20always%20gotten.%22%20Tony%20Robbins`
+  let tweetPath = `https://twitter.com/intent/tweet?text=${quote}-${author}`
 
   useEffect(() => {
     getQuote();
@@ -21,11 +21,8 @@ function App() {
     axios.get('https://type.fit/api/quotes').then(function(res) {
       setQuote(res.data[randomNum].text);
       setAuthor(res.data[randomNum].author);
-
-      //console.log(res.data[0].author);
-      //console.log(res.data[0].text);
     });
-  }
+  };
 
 
   return (
